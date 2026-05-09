@@ -13,7 +13,7 @@ import {
 } from 'recharts';
 import './App.css';
 
-axios.defaults.baseURL = `http://${window.location.hostname}:5000`;
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || `http://${window.location.hostname}:5000`;
 axios.defaults.withCredentials = true;
 
 class ErrorBoundary extends React.Component {
